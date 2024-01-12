@@ -4,6 +4,7 @@
 
 ```shell
 mvn -U clean package assembly:assembly -Dmaven.test.skip=true
+mvn -U clean install assembly:assembly -Dmaven.test.skip=true
 ```
 
 [![Leaderboard](https://img.shields.io/badge/DataX-%E6%9F%A5%E7%9C%8B%E8%B4%A1%E7%8C%AE%E6%8E%92%E8%A1%8C%E6%A6%9C-orange)](https://opensource.alibaba.com/contribution_leaderboard/details?projectValue=datax)

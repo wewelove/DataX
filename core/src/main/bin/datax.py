@@ -26,13 +26,15 @@ DATAX_HOME = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATAX_VERSION = 'DATAX-OPENSOURCE-3.0'
 if isWindows():
     codecs.register(lambda name: name == 'cp65001' and codecs.lookup('utf-8') or None)
+    ENCODING = 'GBK'
     CLASS_PATH = ("%s/lib/*") % (DATAX_HOME)
 else:
+    ENCODING = 'UTF-8'
     CLASS_PATH = ("%s/lib/*:.") % (DATAX_HOME)
 LOGBACK_FILE = ("%s/conf/logback.xml") % (DATAX_HOME)
 DEFAULT_JVM = "-Xms1g -Xmx1g -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=%s/log" % (DATAX_HOME)
-DEFAULT_PROPERTY_CONF = "-Dfile.encoding=UTF-8 -Dlogback.statusListenerClass=ch.qos.logback.core.status.NopStatusListener -Djava.security.egd=file:///dev/urandom -Ddatax.home=%s -Dlogback.configurationFile=%s" % (
-    DATAX_HOME, LOGBACK_FILE)
+DEFAULT_PROPERTY_CONF = "-Dfile.encoding=%s -Dlogback.statusListenerClass=ch.qos.logback.core.status.NopStatusListener -Djava.security.egd=file:///dev/urandom -Ddatax.home=%s -Dlogback.configurationFile=%s" % (
+    ENCODING, DATAX_HOME, LOGBACK_FILE)
 ENGINE_COMMAND = "java -server ${jvm} %s -classpath %s  ${params} com.alibaba.datax.core.Engine -mode ${mode} -jobid ${jobid} -job ${job}" % (
     DEFAULT_PROPERTY_CONF, CLASS_PATH)
 REMOTE_DEBUG_CONFIG = "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=9999"

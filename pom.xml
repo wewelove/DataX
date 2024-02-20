@@ -80,6 +80,8 @@
         <module>loghubreader</module>
         <module>datahubreader</module>
         <module>starrocksreader</module>
+        <module>gaussdbreader</module>
+        <module>gbase8areader</module>
 
         <!-- writer -->
         <module>mysqlwriter</module>
@@ -125,12 +127,12 @@
         <module>selectdbwriter</module>
         <module>adbmysqlwriter</module>
         <module>neo4jwriter</module>
+        <module>gaussdbwriter</module>
+        <module>gbase8awriter</module>
 
         <!-- common support module -->
         <module>plugin-rdbms-util</module>
         <module>plugin-unstructured-storage-util</module>
-        <module>gaussdbreader</module>
-        <module>gaussdbwriter</module>
         <module>datax-example</module>
 
     </modules>

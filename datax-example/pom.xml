@@ -15,6 +15,8 @@
         <module>datax-example-core</module>
         <module>datax-example-streamreader</module>
         <module>datax-example-neo4j</module>
+        <module>datax-example-gbase8a</module>
+        <module>datax-example-gaussdb</module>
     </modules>
 
     <properties>

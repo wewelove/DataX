@@ -26,7 +26,8 @@ public enum DataBaseType {
     OceanBase("oceanbase", "com.alipay.oceanbase.jdbc.Driver"),
     StarRocks("starrocks", "com.mysql.jdbc.Driver"),
     GaussDB("gaussdb", "org.opengauss.Driver"),
-    Databend("databend", "com.databend.jdbc.DatabendDriver");
+    Databend("databend", "com.databend.jdbc.DatabendDriver"),
+    Gbase8a("gbase", "com.gbase.jdbc.Driver");
 
     private String typeName;
     private String driverClassName;
@@ -73,6 +74,8 @@ public enum DataBaseType {
             case StarRocks:
                 break;
             case GaussDB:
+                break;
+            case Gbase8a:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
@@ -137,6 +140,8 @@ public enum DataBaseType {
                 break;
             case GaussDB:
                 break;
+            case Gbase8a:
+                break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
         }
@@ -166,6 +171,8 @@ public enum DataBaseType {
                 break;
             case GaussDB:
                 break;
+            case Gbase8a:
+                break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
         }
@@ -192,6 +199,8 @@ public enum DataBaseType {
             case Oscar:
                 break;
             case GaussDB:
+                break;
+            case Gbase8a:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type");
@@ -220,6 +229,8 @@ public enum DataBaseType {
             case Oscar:
                 break;
             case GaussDB:
+                break;
+            case Gbase8a:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type");

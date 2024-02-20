@@ -1,0 +1,52 @@
+{
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "column": [
+              "*"
+            ],
+            "connection": [
+              {
+                "jdbcUrl": [
+                  "jdbc:mysql://dev.v4coder.cn:3306/sakila?useSSL=false&useUnicode=true&characterEncoding=utf-8"
+                ],
+                "table": [
+                  "actor"
+                ]
+              }
+            ],
+            "username": "root",
+            "password": "qwer1234"
+          }
+        },
+        "writer": {
+          "name": "gbase8awriter",
+          "parameter": {
+            "column": [
+              "*"
+            ],
+            "connection": [
+              {
+                "jdbcUrl": "jdbc:gbase://dev.v4coder.cn:5258/sakila?useSSL=false&useUnicode=true&characterEncoding=utf-8",
+                "table": [
+                  "actor"
+                ]
+              }
+            ],
+            "preSql": [],
+            "username": "root",
+            "password": "root"
+          }
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    }
+  }
+}

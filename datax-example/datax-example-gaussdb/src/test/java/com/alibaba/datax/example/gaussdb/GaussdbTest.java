@@ -10,18 +10,32 @@ import org.junit.Test;
  */
 
 public class GaussdbTest {
-
+    @Test
+    public void testMysql2Oralce() {
+        String path = "/mysql2oracle.json";
+        String jobPath = PathUtil.getAbsolutePathFromClassPath(path);
+        ExampleContainer.start(jobPath);
+    }
+    
+    @Test
+    public void testOracle2Gaussdb() {
+        String path = "/oracle2gaussdb.json";
+        String jobPath = PathUtil.getAbsolutePathFromClassPath(path);
+        ExampleContainer.start(jobPath);
+    }
+    
     @Test
     public void testMysql2Gaussdb() {
         String path = "/mysql2gaussdb.json";
         String jobPath = PathUtil.getAbsolutePathFromClassPath(path);
         ExampleContainer.start(jobPath);
     }
-
+    
     @Test
     public void testGaussdb2Mysql() {
         String path = "/gaussdb2mysql.json";
         String jobPath = PathUtil.getAbsolutePathFromClassPath(path);
         ExampleContainer.start(jobPath);
     }
+    
 }

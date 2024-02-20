@@ -10,7 +10,20 @@ import org.junit.Test;
  */
 
 public class Gbase8aTest {
-
+    
+    @Test
+    public void testMysql2Oralce() {
+        String path = "/mysql2oracle.json";
+        String jobPath = PathUtil.getAbsolutePathFromClassPath(path);
+        ExampleContainer.start(jobPath);
+    }
+    
+    @Test
+    public void testOracle2Gbase8a() {
+        String path = "/oracle2gbase8a.json";
+        String jobPath = PathUtil.getAbsolutePathFromClassPath(path);
+        ExampleContainer.start(jobPath);
+    }
     @Test
     public void testMysql2Gbase8a() {
         String path = "/mysql2gbase8a.json";

@@ -3,7 +3,7 @@
     "content": [
       {
         "reader": {
-          "name": "mysqlreader",
+          "name": "oraclereader",
           "parameter": {
             "column": [
               "*"
@@ -11,14 +11,14 @@
             "connection": [
               {
                 "jdbcUrl": [
-                  "jdbc:mysql://dev.v4coder.cn:3306/sakila?useSSL=false&useUnicode=true&characterEncoding=utf-8"
+                  "jdbc:oracle:thin:@dev.v4coder.cn:1521/ORCL"
                 ],
                 "table": [
                   "sakila.actor"
                 ]
               }
             ],
-            "username": "root",
+            "username": "sakila",
             "password": "qwer1234"
           }
         },

@@ -23,22 +23,22 @@
           }
         },
         "writer": {
-          "name": "gaussdbwriter",
+          "name": "oraclewriter",
           "parameter": {
             "column": [
               "*"
             ],
             "connection": [
               {
-                "jdbcUrl": "jdbc:opengauss://dev.v4coder.cn:5432/test",
+                "jdbcUrl": "jdbc:oracle:thin:@dev.v4coder.cn:1521/ORCL",
                 "table": [
                   "sakila.actor"
                 ]
               }
             ],
             "preSql": [],
-            "username": "gaussdb",
-            "password": "Qwer@1234"
+            "username": "sakila",
+            "password": "qwer1234"
           }
         }
       }

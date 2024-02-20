@@ -14,7 +14,7 @@
                   "jdbc:gbase://dev.v4coder.cn:5258/sakila?useSSL=false&useUnicode=true&characterEncoding=utf-8"
                 ],
                 "table": [
-                  "actor"
+                  "sakila.actor"
                 ]
               }
             ],
@@ -32,7 +32,7 @@
               {
                 "jdbcUrl": "jdbc:mysql://dev.v4coder.cn:3306/demo?useSSL=false&useUnicode=true&characterEncoding=utf-8",
                 "table": [
-                  "actor"
+                  "demo.actor"
                 ]
               }
             ],

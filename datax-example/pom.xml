@@ -17,6 +17,7 @@
         <module>datax-example-neo4j</module>
         <module>datax-example-gbase8a</module>
         <module>datax-example-gaussdb</module>
+        <module>datax-example-txtfile</module>
     </modules>
 
     <properties>

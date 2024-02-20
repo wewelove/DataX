@@ -1,0 +1,63 @@
+{
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "name": "txtfilereader",
+          "parameter": {
+            "path": ["d:/datax/demo.csv"],
+            "encoding": "GBK",
+            "column": [
+              {
+                "index": 0,
+                "type": "long"
+              },
+              {
+                "index": 1,
+                "type": "boolean"
+              },
+              {
+                "index": 2,
+                "type": "double"
+              },
+              {
+                "index": 3,
+                "type": "string"
+              },
+              {
+                "index": 4,
+                "type": "date",
+                "format": "yyyy.MM.dd"
+              }
+            ],
+            "fieldDelimiter": ","
+          }
+        },
+        "writer": {
+          "name": "mysqlwriter",
+          "parameter": {
+            "column": [
+              "*"
+            ],
+            "connection": [
+              {
+                "jdbcUrl": "jdbc:mysql://dev.v4coder.cn:3306/demo?useSSL=false&useUnicode=true&characterEncoding=utf-8",
+                "table": [
+                  "demo.txtfile"
+                ]
+              }
+            ],
+            "preSql": [],
+            "username": "root",
+            "password": "qwer1234"
+          }
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    }
+  }
+}

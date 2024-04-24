@@ -1,8 +1,6 @@
-<assembly
-        xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
-    
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+
     <id>datax</id>
     <formats>
         <format>tar.gz</format>
@@ -139,7 +137,7 @@
             </includes>
             <outputDirectory>datax</outputDirectory>
         </fileSet>
-         <fileSet>
+        <fileSet>
             <directory>ftpreader/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
@@ -245,7 +243,21 @@
             <outputDirectory>datax</outputDirectory>
         </fileSet>
         <fileSet>
+            <directory>dorisreader/target/datax/</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+            <outputDirectory>datax</outputDirectory>
+        </fileSet>
+        <fileSet>
             <directory>gaussdbreader/target/datax/</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+            <outputDirectory>datax</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>sybasereader/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
             </includes>
@@ -344,7 +356,7 @@
             </includes>
             <outputDirectory>datax</outputDirectory>
         </fileSet>
-		<fileSet>
+        <fileSet>
             <directory>oraclewriter/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
@@ -358,7 +370,7 @@
             </includes>
             <outputDirectory>datax</outputDirectory>
         </fileSet>
-		<fileSet>
+        <fileSet>
             <directory>postgresqlwriter/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
@@ -535,6 +547,13 @@
         </fileSet>
         <fileSet>
             <directory>gaussdbwriter/target/datax/</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+            <outputDirectory>datax</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>sybasewriter/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
             </includes>

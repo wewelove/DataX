@@ -25,9 +25,11 @@ public enum DataBaseType {
     Oscar("oscar", "com.oscar.Driver"),
     OceanBase("oceanbase", "com.alipay.oceanbase.jdbc.Driver"),
     StarRocks("starrocks", "com.mysql.jdbc.Driver"),
+    Sybase("sybase", "com.sybase.jdbc4.jdbc.SybDriver"),
     GaussDB("gaussdb", "org.opengauss.Driver"),
     Databend("databend", "com.databend.jdbc.DatabendDriver"),
     Gbase8a("gbase", "com.gbase.jdbc.Driver");
+    Doris("doris","com.mysql.jdbc.Driver");
 
     private String typeName;
     private String driverClassName;
@@ -76,6 +78,7 @@ public enum DataBaseType {
             case GaussDB:
                 break;
             case Gbase8a:
+            case Doris:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
@@ -137,6 +140,8 @@ public enum DataBaseType {
                 } else {
                     result = jdbc + "?" + suffix;
                 }
+                break;
+            case Sybase:
                 break;
             case GaussDB:
                 break;
